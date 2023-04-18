@@ -59,10 +59,22 @@ fetch(url)
         console.log(parseInt(Math.random() * 209))
     })
 
-    $('#oscuro').change(function() {
+    $('#oscuro').click(function() {
         $('#fondo').toggleClass('dark-mode');
+        $('.card').toggleClass('dark-mode');
+        $('.navbar').toggleClass('dark-mode');
+        $('.nav-link').toggleClass('dark-mode');
     });
+ 
     
+    $(document).ready(function() {
+        $('#search-box').keyup(function() {
+          var searchValue = $(this).val().toLowerCase();
+          $('#contenido .col').filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(searchValue) > -1);
+          });
+        });
+      });
     
 
     

@@ -7,15 +7,28 @@
     z-index: 1;
     width: 100%;
 }
+.navbar.dark-mode{
+    background-color: #084071 !important;
+}
     .nav-link{
         color: #FDEC4B !important;
         text-shadow: 0px 0px 5px #FF6600;
     }
+    .nav-link.dark-mode{
+        color: #ffffff !important;
+        text-shadow: 0px 0px 5px #046AA7;
+    }
     .nav-link:hover{
         text-shadow: 0px 0px 5px #FF6600, 1px 1px 1px #000000, -1px -1px 1px #000000;
     }
+    .nav-link.dark-mode:hover{
+        text-shadow: 0px 0px 5px #ffffff, 1px 1px 1px #046AA7, -1px -1px 1px #046AA7;
+    }
     #digimonLogo{
         height: 50px;
+    }
+    #search-box:focus{
+        box-shadow: 0px 0px 5px #f0f0f0;
     }
     #switchCont{
         position: absolute;
@@ -23,8 +36,48 @@
         right: 0;
         margin-right: 2%;
     }
+    .form-switch{
+        padding-left: 0;
+    }
+    .btn{
+        width: 130px;
+    }
+    .btn-primary{
+        background: linear-gradient(#074B88, #04141E);
+        border: 2px solid #000000;
+    }
+    .btn-primary::after{
+        content: "claro";
+    }
+    .btn-primary:hover{
+        background: linear-gradient(#074B88, #04141E);
+        text-shadow: 0px 0px 3px #046AA7;
+        border: 2px solid #454545;
+    }
+    .btn-primary.active{
+        background: linear-gradient(#FECC3D, #FF6600);
+        border: 2px solid #f0f0f0;
+    }
+    .btn-primary.active::after{
+        content: "oscuro";
+    }
+    .btn-primary.active:hover{
+        background-color: none;
+        text-shadow: 0px 0px 3px #cf5300;
+        border: 2px solid #c4c4c4;
+    }
+    .navbar-toggler{
+        color: #c4c4c466;
+    }
+    /*.navbar-toggler:hover{
+        box-shadow: 0px 0px 5px #f0f0f0;
+    }*/
 .fondo{
     background: linear-gradient(#FECC3D, #FF6600);
+    min-height: 900px;
+}
+.fondo.dark-mode{
+    background: linear-gradient(#011321, #000000);
 }
 #espaciador{
     height: 50px;
@@ -41,10 +94,15 @@
 .card{
     background-color: #c2ceda;
     align-items: center;
+    text-align: center;
     /*border: 2px solid #074B88;*/
 }
+.card.dark-mode{
+    background-color: #046AA7;
+    color: #f0f0f0;
+}
 .card:hover{
-    box-shadow: 0px 0px 7px 3px #FF6600;
+    box-shadow: 0px 0px 7px 3px #ffffff;
 }
 .card-img-top{
     width: 90%;
@@ -79,11 +137,10 @@
     z-index: 2;
     cursor: pointer;
 }
-.dark-mode{
-    background: linear-gradient(#011321, #000000);
-    
-}
 
+.form-control{
+    width: 200px;
+}
 
 @media all and (max-width: 991px){
     #contenido{
