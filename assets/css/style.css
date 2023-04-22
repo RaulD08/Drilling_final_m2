@@ -1,6 +1,6 @@
 .navbar{
     height: auto;
-    background-color: #036BA7 !important;
+    background-color: #005a8e !important;
     position: fixed;
     top: 0;
     bottom: 1;
@@ -19,13 +19,17 @@
         text-shadow: 0px 0px 5px #046AA7;
     }
     .nav-link:hover{
-        text-shadow: 0px 0px 5px #FF6600, 1px 1px 1px #000000, -1px -1px 1px #000000;
+        text-shadow: 0px 0px 5px #FF6600, 1px 1px 2px #ffffff44, -1px -1px 2px #ffffff44;
     }
     .nav-link.dark-mode:hover{
         text-shadow: 0px 0px 5px #ffffff, 1px 1px 1px #046AA7, -1px -1px 1px #046AA7;
     }
     #digimonLogo{
         height: 50px;
+        margin-right: 2%;
+    }
+    #search-box{
+        margin-left: 3%;
     }
     #search-box:focus{
         box-shadow: 0px 0px 5px #f0f0f0;
@@ -44,7 +48,7 @@
     }
     .btn-primary{
         background: linear-gradient(#074B88, #04141E);
-        border: 2px solid #000000;
+        border: 2px solid #082743;
     }
     .btn-primary::after{
         content: "claro";
@@ -52,11 +56,14 @@
     .btn-primary:hover{
         background: linear-gradient(#074B88, #04141E);
         text-shadow: 0px 0px 3px #046AA7;
-        border: 2px solid #454545;
+        border: 2px solid #000000;
+    }
+    .btn-primary:active{
+        border: 2px solid #f0f0f0 !important;
     }
     .btn-primary.active{
         background: linear-gradient(#FECC3D, #FF6600);
-        border: 2px solid #f0f0f0;
+        border: 2px solid #f77b28;
     }
     .btn-primary.active::after{
         content: "oscuro";
@@ -64,7 +71,7 @@
     .btn-primary.active:hover{
         background-color: none;
         text-shadow: 0px 0px 3px #cf5300;
-        border: 2px solid #c4c4c4;
+        border: 2px solid #e2620c;
     }
     .navbar-toggler{
         color: #c4c4c466;
@@ -73,11 +80,11 @@
         box-shadow: 0px 0px 5px #f0f0f0;
     }*/
 .fondo{
-    background: linear-gradient(#FECC3D, #FF6600);
+    background: linear-gradient(270deg, #FF6600, #FECC3D 15%, #FECC3D 85%, #FF6600);
     min-height: 900px;
 }
 .fondo.dark-mode{
-    background: linear-gradient(#011321, #000000);
+    background: linear-gradient(270deg, #010b13, #022036 15%, #022036 85%, #010b13);
 }
 #espaciador{
     height: 50px;
@@ -85,31 +92,38 @@
 #contenido{
     padding: 5%;
 }
-.card-title{
-    text-align: center;
-}
-.card-text{
-    margin-top: 10%;
-}
+
 .card{
-    background-color: #c2ceda;
+    background-color: #e8e7dc;
     align-items: center;
     text-align: center;
-    /*border: 2px solid #074B88;*/
+    border: 2px solid #005a8e88;
 }
-.card.dark-mode{
-    background-color: #046AA7;
-    color: #f0f0f0;
-}
-.card:hover{
-    box-shadow: 0px 0px 7px 3px #ffffff;
-}
-.card-img-top{
-    width: 90%;
-    margin-top: 5%;
-    border-radius: 5px;
-    /*border: 2px solid #074B88;*/
-}
+    .card.dark-mode{
+        background-color: #046AA7;
+        color: #f0f0f0;
+        border: 2px solid #dce5e888;
+    }
+    .card:hover{
+        box-shadow: 0px 0px 7px 3px #ffffff;
+        background-color: #ecf5f8;
+    }
+    .card:hover.dark-mode{
+        background-color: #1283c4;
+        box-shadow: 0px 0px 7px 3px #ffffff88;
+    }
+    .card-img-top{
+        width: 90%;
+        margin-top: 5%;
+        border-radius: 5px;
+        /*border: 2px solid #074B88;*/
+    }
+    .card-title{
+        text-align: center;
+    }
+    .card-text{
+        margin-top: 10%;
+    }
 .activa{
     position: fixed;
     top: 0;
@@ -123,6 +137,11 @@
 }
 .activa:hover{
     box-shadow: none;
+    background-color: #e8e7dc;
+}
+.activa:hover.dark-mode{
+    box-shadow: none;
+    background-color: #046AA7;
 }
 #overlay {
     position: fixed;
@@ -153,5 +172,9 @@
     #switchCont{
         position: inherit;
         margin-top: 10px;
+    }
+    #search-box{
+        margin-left: 0%;
+        margin-top: 1%;
     }
 }
