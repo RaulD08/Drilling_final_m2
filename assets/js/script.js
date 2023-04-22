@@ -32,14 +32,14 @@ fetch(url)
         $(".card").removeClass("activa")
         $("#cardRnd").css("display","none")
     })
-    /*$("#oscuro").Select(function(){
-        $("#fondo").css("background", "linear-gradient(#FECC3D, #000000)")
-    })*/
+    
 
     $("#aleatorio").click(function(){
         var cardRnd = document.querySelector("#cardRnd")
         numRnd=(parseInt(Math.random() * 209))
-        cardRnd.innerHTML=`
+        console.log($(".nav-link").css("color"))
+        if ($(".nav-link").css("color")=="rgb(253, 236, 75)") {
+          cardRnd.innerHTML=`
         
                 <div class="col">
                   <div class="card activa h-100">
@@ -52,6 +52,22 @@ fetch(url)
                 </div>
 
         `
+        } else if($(".nav-link").css("color")=="rgb(255, 255, 255)") {
+          cardRnd.innerHTML=`
+        
+                <div class="col">
+                  <div class="card activa dark-mode h-100">
+                    <img src="${datos[numRnd].img}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">${datos[numRnd].name}</h5>
+                      <p class="card-text">Nivel: ${datos[numRnd].level}</p>
+                    </div>
+                  </div>
+                </div>
+
+        `
+        }
+        
         $("#cardRnd").css("display","block")
         $("#overlay").fadeIn(300)
         $("#overlay").css("display","block")
@@ -79,23 +95,3 @@ fetch(url)
 
     
 })
-
-/*
-document.querySelector("#img-poster").src=datos.poster
-    document.querySelector("#titulo").innerHTML+=`
-            ${datos.title}
-        `
-    document.querySelector("#sinopsis").innerHTML+=`
-            ${datos.synopsis}
-        `
-    document.querySelector("#tituloRoman").innerHTML+=`
-            <p class="subTitulo">Título romanizado:</p> ${datos.hepburn}
-        `
-    document.querySelector("#estreno").innerHTML+=`
-            <p class="subTitulo">Fecha de estreno:</p> ${datos.release}
-        `
-    document.querySelector("#director").innerHTML+=`
-        <p class="subTitulo">Director:</p> ${datos.director}
-    `
-    
-*/

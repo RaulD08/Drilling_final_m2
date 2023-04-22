@@ -76,9 +76,7 @@
     .navbar-toggler{
         color: #c4c4c466;
     }
-    /*.navbar-toggler:hover{
-        box-shadow: 0px 0px 5px #f0f0f0;
-    }*/
+    
 .fondo{
     background: linear-gradient(270deg, #FF6600, #FECC3D 15%, #FECC3D 85%, #FF6600);
     min-height: 900px;
@@ -116,7 +114,6 @@
         width: 90%;
         margin-top: 5%;
         border-radius: 5px;
-        /*border: 2px solid #074B88;*/
     }
     .card-title{
         text-align: center;
